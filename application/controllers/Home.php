@@ -44,7 +44,7 @@ class Home extends CI_Controller {
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
     
-        //panggil function get_mahasiswa_list yang ada pada mmodel mahasiswa_model. 
+        //panggil function get_Buku_list yang ada pada mmodel user_model. 
         $data['data'] = $this->ModelBuku->getBukuList($config["per_page"], $data['page']);           
     
         $data['pagination'] = $this->pagination->create_links();
